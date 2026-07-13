@@ -3,43 +3,50 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            CAR RENTAL
-          </Link>
+    <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+      <div className="container">
+        <Link className="navbar-brand fw-bold fs-4" to="/">
+          Car Rental
+        </Link>
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
               <Link className="nav-link" to="/">
                 Home
               </Link>
+            </li>
 
+            <li className="nav-item">
               <Link className="nav-link" to="/add">
-                Add Cars
+                Add Car
               </Link>
+            </li>
 
+            <li className="nav-item">
               <Link className="nav-link" to="/view">
                 View Cars
               </Link>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
